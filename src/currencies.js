@@ -156,6 +156,14 @@ var CURRENCIES = [{
     name: 'qtum',
     symbol: 'qtum',
     addressTypes: {prod: ['3a', '32'], testnet: ['6f', 'c4']}
+},{
+    name: 'tokenpay',
+    symbol: 'tpay',
+    addressTypes: {prod: ['41', '7e'], testnet: []}
+},{
+    name: 'verge',
+    symbol: 'xvg',
+    addressTypes: {prod: ['1e', '33'], testnet: ['6f', 'c4']}
 }];
 
 
