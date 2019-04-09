@@ -159,12 +159,13 @@ var CURRENCIES = [{
 },{
     name: 'tokenpay',
     symbol: 'tpay',
-    addressTypes: {prod: ['41', '7e'], testnet: []}
+    addressTypes: {prod: ['41', '7e'], testnet: ['7f', 'c4']}
 },{
     name: 'verge',
     symbol: 'xvg',
     addressTypes: {prod: ['1e', '33'], testnet: ['6f', 'c4']}
 }];
+
 
 
 module.exports = {
