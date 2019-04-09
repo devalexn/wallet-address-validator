@@ -327,6 +327,17 @@ describe('WAValidator.validate()', function () {
             valid('RAvj2KKVUohTu3hVdNJ4U6hQi7TNawpacH', 'KMD');
             //valid('t2UNzUUx8mWBCRYPRezvA363EYXyEpHokyi', 'komodo', 'testnet');
         });
+
+        it('should return true for correct tokenpay addresses', function () {
+            valid('TTU9AFbvNcUfyUC3JLcXGKnMncsPJzViyj', 'tokenpay');
+            valid('TYpb6GJDjchpi3GfwZfcLHA2jfWP6kXEMC', 'TPAY');
+            valid('tC3qX5M25NJhUnhJpcFHaxLkQJjyHGBzqf', 'tokenpay', 'testnet');
+        });
+
+        it('should return true for correct verge addresses', function () {
+            valid('DSePg1kfKC1Pr8FCf52tM7K6Mrg5CB29xT', 'verge');
+            valid('D7JLwcCtZRyJzEuCnhocc1gDCXqoWb5KL1', 'XVG');
+        });
     });
 
     describe('invalid results', function () {
@@ -510,6 +521,18 @@ describe('WAValidator.validate()', function () {
             invalid('RAYj2KKVUohTu3hVdNJ4U6hQi7TNawpacH', 'KMD');
             //invalid('t2YNzUUx8mWBCRYPRezvA363EYXyEpHokyi', 'komodo', 'testnet');
         });
-        
+
+        it('should return false for incorrect tokenpay addresses', function () {
+            commonTests('tokenpay');
+            invalid('TTU9AFbvNcUfyUC3JLcXGKnMncsPJzViyk', 'tokenpay');
+            invalid('TYpb6GJDjchpi3GfwZfcLHA2jfWP6kXEMd', 'TPAY');
+            invalid('tC3qX5M25NJhUnhJpcFHaxLkQJjyHGBzqf', 'tokenpay', 'testnet');
+        });
+
+        it('should return false for incorrect verge addresses', function () {
+            commonTests('verge');
+            invalid('DSePg1kfKC1Pr8FCf52tM7K6Mrg5CB29xs', 'verge');
+            invalid('D7JLwcCtZRyJzEuCnhocc1gDCXqoWb5KL5', 'XVG');
+        });
     });
 });
