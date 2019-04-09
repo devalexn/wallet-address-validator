@@ -612,7 +612,7 @@ describe('WAValidator.validate()', function () {
             commonTests('tokenpay');
             invalid('TTU9AFbvNcUfyUC3JLcXGKnMncsPJzViyk', 'tokenpay');
             invalid('TYpb6GJDjchpi3GfwZfcLHA2jfWP6kXEMd', 'TPAY');
-            invalid('tC3qX5M25NJhUnhJpcFHaxLkQJjyHGBzqf', 'tokenpay', 'testnet');
+            invalid('tC3qX5M25NJhUnhJpcFHaxLkQJjyHGBzqv', 'tokenpay', 'testnet');
             invalid('tNLYDkCLm1kpCM7RZbUFFnvWL6t4NvQ5p4', 'TPAY', 'testnet');
         });
 
